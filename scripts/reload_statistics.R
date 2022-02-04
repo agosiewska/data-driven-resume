@@ -8,7 +8,7 @@ if (!is.null(config[["scholar"]])) {
   no_citations <- sum(citations[["cites"]])
   publications <- get_publications(id)
   no_publications <- nrow(publications)
-  
+  div()
   statistics <- list(no_citations = no_citations,
                      no_publications = no_publications,
                      gh_stars = 0,

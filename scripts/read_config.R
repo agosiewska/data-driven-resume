@@ -32,11 +32,17 @@ linkedin <- if (!is.null(config[["social_media"]][["linkedin"]])) {
 } else {
   NULL
 }
+scholar <-  if (!is.null(config[["social_media"]][["scholar"]])) {
+  a(href=paste0("https://scholar.google.pl/citations?user=", config[["social_media"]][["scholar"]]), 
+    class="fa fa-graduation-cap")
+} else {
+  NULL
+}
 ui_element <- list(
   "photo" = div(img(src=config[["photo"]],  width="35%"), 
                 style="text-align: center;"),
   "name" = div(h3(config[["name"]]), 
                style="text-align: center;"),
-  "social_media" = div(github, linkedin, style="text-align: center;"),
+  "social_media" = div(github, linkedin, scholar, style="text-align: center;"),
   "about" = div(HTML(config[["about"]]), style="margin-left:15px;")
 )

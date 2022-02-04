@@ -25,7 +25,11 @@ dashboardPage(
       condition=show_element[["about"]],
       ui_element[["about"]]
     ),
-    br()
+    br(),
+    conditionalPanel(
+      condition = show_element[["scholar"]],
+      
+    )
     
     
   ),
