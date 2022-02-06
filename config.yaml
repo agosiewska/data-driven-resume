@@ -29,5 +29,5 @@ panels:
   industry: "./data/industry.md"
   academia: "./data/academia.md"
   community: "./data/community.md"
-  technology: "./data/technology.md"
+  technologies: "./data/technologies.md"
 

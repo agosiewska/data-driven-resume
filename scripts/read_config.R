@@ -87,8 +87,8 @@ ui_element <- list(
     class="sidebar-name"
   ),
   "name" = div(
-    h3(config[["name"]]), 
-    class="sidebar-name"
+    h3(config[["name"]], class="sidebar-name"), 
+    class="sidebar-name",
   ),
   "social_media" = div(
     linkedin, twitter, github, scholar, cran_packages, 

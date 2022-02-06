@@ -1,16 +1,21 @@
 ## ui.R ##
 library(shinydashboard)
 library(markdown)
-
+library(dashboardthemes)
 
 source("./scripts/read_config.R")
+source("./shiny_theme.R")
 load("./data/statistics.rda")
+
+
 tagList(
   tags$head(
     includeCSS("styles.css")
   ),
+  customTheme,
   dashboardPage(
-    dashboardHeader(),
+    
+    dashboardHeader(title="Data-driven resume"),
     dashboardSidebar(
       br(),
       conditionalPanel(
@@ -41,18 +46,21 @@ tagList(
         box(
           checkboxGroupInput(
             "plot_checkbox", 
-            label="Click on panel to see more details",
+            label="Click on the timeline to see more details about each area.",
             choices=c(
-              "Industry" = "industry",
               "Technologies" = "technologies",
+              "Industry" = "industry",
               "Academia" = "academia",
               "Community" = "community"
             ),
-            selected = c("industry", "technologies"),
+            selected = c("technologies", "industry"),
             inline=TRUE
           ),
           uiOutput("dynamic_plot"),
           title="Career timeline"
+        ),
+        box(
+          uiOutput("text_panel")
         )
       )
     )

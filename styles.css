@@ -16,6 +16,7 @@
 }
 .sidebar-name{
   text-align: center;
+  color:white;
 }
 .social-media {
   text-align:left; 
@@ -26,4 +27,11 @@
 }
 .social-media-login{
   padding-left: 5px;
+}
+.box{
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-color: rgb(52,62,72);
 }
