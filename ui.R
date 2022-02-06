@@ -28,10 +28,7 @@ dashboardPage(
     br(),
     conditionalPanel(
       condition = show_element[["scholar"]],
-      
     )
-    
-    
   ),
   dashboardBody(
     fluidRow(
