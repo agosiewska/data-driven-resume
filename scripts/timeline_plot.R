@@ -13,10 +13,7 @@ timeline <- read.csv2("./data/timeline.csv") %>%
                    arrange(start))
          } %>%
   pivot_longer(col=c(start, end), names_to = "start_end", values_to = "time" ) %>% 
-  mutate(name = factor(name, levels = unique(name)))
+  mutate(name = factor(name, levels = unique(name)),
+         type = factor(type, levels=c("industry", "technologies", "academia", "community")))
 
 
-timeline_plot <- ggplot(timeline, aes(x = time, y = name, group = name)) +
-  geom_line(position=position_dodge2(width = 1.5)) +
-  facet_wrap(~ type, ncol = 1, scales = "free_y") +
-  labs(x="", y="")

@@ -4,9 +4,9 @@ photo: "Alicja_circle.png"
 social_media:
   github: "agosiewska"
   outside_github_stars:
-    - "ModelOriented/iBreakDown"
     - "ModelOriented/auditor"
     - "ModelOriented/rSAFE"
+    - "ModelOriented/iBreakDown"
     - "MI2DataLab/survxai"
     - "ModelOriented/localModel"
     - "ModelOriented/shapper"
@@ -24,11 +24,7 @@ social_media:
     - "localModel"
     - "countfitteR"
     
-about:
-  - "Data enthusiast with 4+ experience in data science."
-  - "Skilled in R and Python."
-  - "Interested in explainable artificial intelligence (XAI) and data visualization."
-  - "With a strong background in mathematics (Bachelor) and statistics (Master)."
+about: "./data/about.md"
 panels:
   industry: "./data/industry.md"
   academia: "./data/academia.md"

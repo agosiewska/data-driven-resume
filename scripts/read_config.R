@@ -1,33 +1,16 @@
 library(yaml)
 library(dplyr)
 library(shiny)
+
 config <- read_yaml("config.yaml")
 load("./data/statistics.rda")
 
 elements <- names(config)
 show_element <-lapply(elements, function(element){
-  if (! is.null(element)) {
-    TRUE
-  } else {
-    FALSE
-  } 
+  if (! is.null(element)) TRUE else  FALSE
 }) %>% 
   setNames(paste(elements, sep=""))
-
-config[["about"]] <- paste(
-  "<ul style='list-style-type:none; padding-left: 0;'>",
-  paste(
-    lapply(config[["about"]], 
-           function(x){
-             paste0(
-               "<li style='margin: 0 0 5px 0;'>", 
-               x, 
-               "</li>"
-             )
-           }), 
-    collapse=" "),
-  "</ul>"
-)
+show_element[["data_aquired"]] <- TRUE
 
 create_stat_div <- function(sm, title, link, favicon, statistics){
   stat_div <- if (!is.null(config[["social_media"]][[sm]])){
@@ -39,7 +22,7 @@ create_stat_div <- function(sm, title, link, favicon, statistics){
           br(), 
           span(
             paste0(x,": ", statistics[[sm]][[x]]), 
-            style="padding-left:30px;"
+            class="social-media-stats"
           )
         )
       }) %>%
@@ -51,7 +34,7 @@ create_stat_div <- function(sm, title, link, favicon, statistics){
           class=favicon),
         span(
           a(title, href=paste0(link, config[["social_media"]][[sm]])), 
-          style="padding-left: 5px;"
+          class="social-media-login"
         ),
         HTML(sm_stats_html)
     )
@@ -99,10 +82,24 @@ cran_packages <- create_stat_div(
 
 
 ui_element <- list(
-  "photo" = div(img(src=config[["photo"]],  width="35%"), 
-                style="text-align: center;"),
-  "name" = div(h3(config[["name"]]), 
-               style="text-align: center;"),
-  "social_media" = div(linkedin, twitter, github, scholar, cran_packages, style="text-align: left;margin-left:15px"),
-  "about" = div(HTML(config[["about"]]), style="margin-left:15px;")
+  "photo" = div(
+    img(src=config[["photo"]],  width="35%"), 
+    class="sidebar-name"
+  ),
+  "name" = div(
+    h3(config[["name"]]), 
+    class="sidebar-name"
+  ),
+  "social_media" = div(
+    linkedin, twitter, github, scholar, cran_packages, 
+    class="social-media"
+  ),
+  "about" = div(
+    includeMarkdown(config[["about"]]), 
+    class="social-media"
+  ),
+  "data_aquired" = div(
+    p(paste("Data aquired:", statistics[["date"]])),
+    class="data-aquired"
+  )
 )

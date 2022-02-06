@@ -73,4 +73,6 @@ if (!is.null(config[["social_media"]][["github"]])) {
   )
 }
 
+statistics[["date"]] <- Sys.time()
+
 save(statistics, file = "./data/statistics.rda")
