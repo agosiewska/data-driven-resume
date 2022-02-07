@@ -32,11 +32,13 @@ server <- function(input, output) {
       geom_line(position=position_dodge2(width = 1.5), size = 2) +
       facet_wrap(~ type, ncol = 1, scales = "free") +
       labs(x="", y="") + 
-      scale_x_date(limits = c(min(timeline[["time"]]) - 1, max(timeline[["time"]]) + 1 )) +
+      scale_x_date(limits = c(min(timeline[["time"]]) - 1, max(timeline[["time"]]) + 1 ), expand = c(0.02,0.05,0,0.05)) +
       theme_bw(base_size = 11) +
       theme(panel.border = element_blank(),
             strip.background = element_blank(),
-            strip.text = element_text(hjust = 0, size=12)
+            strip.text = element_text(hjust = 0, size=12), 
+            axis.text.y = element_text(size = 10),
+            axis.text.x = element_text(size = 10)
       ) 
   })
   
@@ -47,7 +49,7 @@ server <- function(input, output) {
     )
     plotOutput(
       "plot_timeline", 
-      height = 120 * length(input[["plot_checkbox"]]),
+      height = 150 * length(input[["plot_checkbox"]]),
       click = "timeline_click"
     )
   })

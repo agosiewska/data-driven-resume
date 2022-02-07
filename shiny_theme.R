@@ -11,19 +11,19 @@ customTheme <- shinyDashboardThemeDIY(
   ,bodyBackColor = "rgb(255,255,255)"
   
   ### header
-  ,logoBackColor = "rgb(70,80,90)"
+  ,logoBackColor = "rgb(0,38,78)"
   
-  ,headerButtonBackColor = "rgb(70,80,90)"
-  ,headerButtonIconColor = "rgb(25,35,45)"
-  ,headerButtonBackColorHover = "rgb(40,50,60)"
-  ,headerButtonIconColorHover = "rgb(0,0,0)"
+  ,headerButtonBackColor = "rgb(0,38,78)"
+  ,headerButtonIconColor = "rgb(255,255,255)"
+  ,headerButtonBackColorHover = "rgb(255,255,255)"
+  ,headerButtonIconColorHover = "rgb(0,38,78)"
   
-  ,headerBackColor = "rgb(70,80,90)"
+  ,headerBackColor = "rgb(0,38,78)"
   ,headerBoxShadowColor = ""
   ,headerBoxShadowSize = "0px 0px 0px"
   
   ### sidebar
-  ,sidebarBackColor = "rgb(52,62,72)"
+  ,sidebarBackColor = "rgb(0, 51, 103)"
   ,sidebarPadding = 0
   
   ,sidebarMenuBackColor = "transparent"
@@ -61,7 +61,7 @@ customTheme <- shinyDashboardThemeDIY(
   ,boxBorderRadius = 0
   ,boxShadowSize = "0px 0px 0px"
   ,boxShadowColor = ""
-  ,boxTitleSize = 16
+  ,boxTitleSize = 24
   ,boxDefaultColor = "rgb(52,62,72)"
   ,boxPrimaryColor = "rgb(200,200,200)"
   ,boxInfoColor = "rgb(80,95,105)"

@@ -29,9 +29,17 @@
   padding-left: 5px;
 }
 .box{
-  border-bottom: 1px solid;
-  border-right: 1px solid;
-  border-left: 1px solid;
-  border-top: 1px solid;
+  border-top: 0px solid;
   border-color: rgb(52,62,72);
+}
+.box-details{
+ margin-top: -25px;
+}
+code{
+  color:black;
+  background-color: white;
+}
+
+body {
+    font-size: 12px;
 }

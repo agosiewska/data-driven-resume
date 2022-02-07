@@ -60,12 +60,10 @@ tagList(
           title="Career timeline"
         ),
         box(
-          uiOutput("text_panel")
+          uiOutput("text_panel"),
+          class="box-details"
         )
       )
     )
   ),
-  tags$footer(HTML("Developed by <a href='https://github.com/agosiewska'>@agosiewska</a>"), 
-              align = "right", 
-              class="footer")
 )
