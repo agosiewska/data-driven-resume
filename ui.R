@@ -15,7 +15,7 @@ tagList(
   customTheme,
   dashboardPage(
     
-    dashboardHeader(title="Data-driven resume"),
+    dashboardHeader(title="Resume"),
     dashboardSidebar(
       br(),
       conditionalPanel(
