@@ -2,7 +2,7 @@
 
 A Shiny app that helps you make your CV interactive. Simply fill config file and run your app.
 
-<img src="https://raw.githubusercontent.com/agosiewska/data-driven-resume/main/inst/app_preview.png">
+<img src="./inst/app_preview.png" width=60%>
 
 ## Setup
 
