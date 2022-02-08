@@ -5,7 +5,7 @@
   - Docker-based deployment of machine learning models.
 
 <br/>
-* 03.2017 - 10.2021 - **Researcher** at MI^2 DataLab
+* 03.2017 - 10.2021 - **Researcher and Statistical Software Developer** at MI^2 DataLab
   - The development and maintenance of R packages, including implementation of new tools, documentation, unit tests, and continuous integration.
   - Scientific research on Explainable Artificial Intelligence.
   - Medical data analyses in collaboration with physicians.
