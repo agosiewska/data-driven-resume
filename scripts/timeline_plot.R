@@ -4,7 +4,9 @@ library(dplyr)
 library(tidyr)
 library(tools)
 
-timeline <- read.csv2("./data/timeline.csv") %>% 
+source("./scripts/read_config.R")
+
+timeline <- read.csv2(config[["timeline"]]) %>% 
   mutate(start = dmy(start), 
          end = as_date(ifelse(end == "Present", as_date(Sys.time()), dmy(end)))) %>% {
            rbind(filter(., type %in% c("technologies", "community")) %>%
