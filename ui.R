@@ -2,6 +2,7 @@
 library(shinydashboard)
 library(markdown)
 library(dashboardthemes)
+library(shinycssloaders)
 
 source("./scripts/read_config.R")
 source("./shiny_theme.R")
@@ -56,11 +57,11 @@ tagList(
             selected = c("technologies", "industry"),
             inline=TRUE
           ),
-          uiOutput("dynamic_plot"),
+          withSpinner(uiOutput("dynamic_plot")),
           title="Career timeline"
         ),
         box(
-          uiOutput("text_panel"),
+          withSpinner(uiOutput("text_panel")),
           class="box-details"
         )
       )
