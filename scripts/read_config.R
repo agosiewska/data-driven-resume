@@ -75,7 +75,7 @@ scholar <- create_stat_div(
 cran_packages <- create_stat_div(
   sm = "cran_packages",
   title = "CRAN packages",
-  link = "", 
+  link = "#", 
   favicon = "fab fa-r-project", 
   statistics = statistics
 )
