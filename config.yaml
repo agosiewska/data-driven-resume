@@ -30,6 +30,6 @@ panels:
   industry: "./data/industry.md"
   academia: "./data/academia.md"
   community: "./data/community.md"
-  technologies: "./data/technologies.md"
+  competences: "./data/competences.md"
   education: "./data/education.md"
 timeline: "./data/timeline.csv"

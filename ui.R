@@ -49,13 +49,13 @@ tagList(
             "plot_checkbox", 
             label="Click on the timeline to see more details about each area.",
             choices=c(
-              "Technologies" = "technologies",
+              "Competences" = "competences",
               "Industry" = "industry",
               "Academia" = "academia",
               "Community" = "community",
               "Education" = "education"
             ),
-            selected = c("technologies", "industry"),
+            selected = c("competences", "industry"),
             inline=TRUE
           ),
           withSpinner(uiOutput("dynamic_plot")),

@@ -1,4 +1,5 @@
-### Technologies (selected)
+### Competences (selected)
+
 
 #### R
 I am the maintainer of 2 and contributor of 6 packages on CRAN. 

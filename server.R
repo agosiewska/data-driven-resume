@@ -9,7 +9,7 @@ source("./scripts/read_config.R")
 
 server <- function(input, output) {
   
-  rv <- reactiveValues(selected_type = "technologies")
+  rv <- reactiveValues(selected_type = "competences")
   observeEvent(input[["timeline_click"]],{
     rv[["selected_type"]] <-tolower(input[["timeline_click"]][["panelvar1"]])
   })
