@@ -16,6 +16,6 @@ timeline <- read.csv2(config[["timeline"]]) %>%
          } %>%
   pivot_longer(col=c(start, end), names_to = "start_end", values_to = "time" ) %>% 
   mutate(name = factor(name, levels = unique(name)),
-         type = factor(type, levels=c("technologies", "industry", "academia", "community"))) %>%
+         type = factor(type, levels=c("technologies", "industry", "education", "academia", "community"))) %>%
   mutate(name = factor(name, labels = gsub('(.{1,33})(\\s|$)', '\\1\n', levels(name)))) 
 

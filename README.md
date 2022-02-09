@@ -2,6 +2,8 @@
 
 A Shiny app that helps you make your CV interactive. Simply fill config file and run your app.
 
+[Example app](http://gosiewska.com/)
+
 <img src="./inst/app_preview.png" width=60%>
 
 ## Setup

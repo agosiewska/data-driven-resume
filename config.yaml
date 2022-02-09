@@ -31,4 +31,5 @@ panels:
   academia: "./data/academia.md"
   community: "./data/community.md"
   technologies: "./data/technologies.md"
+  education: "./data/education.md"
 timeline: "./data/timeline.csv"

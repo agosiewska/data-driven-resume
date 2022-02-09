@@ -52,7 +52,8 @@ tagList(
               "Technologies" = "technologies",
               "Industry" = "industry",
               "Academia" = "academia",
-              "Community" = "community"
+              "Community" = "community",
+              "Education" = "education"
             ),
             selected = c("technologies", "industry"),
             inline=TRUE
