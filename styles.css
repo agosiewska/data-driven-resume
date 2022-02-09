@@ -43,3 +43,6 @@ code{
 body {
     font-size: 12px;
 }
+.nav-tabs>li>a{
+  color:black;
+}

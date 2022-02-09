@@ -51,9 +51,9 @@ tagList(
             choices=c(
               "Competences" = "competences",
               "Industry" = "industry",
+              "Education" = "education",
               "Academia" = "academia",
-              "Community" = "community",
-              "Education" = "education"
+              "Community" = "community"
             ),
             selected = c("competences", "industry"),
             inline=TRUE

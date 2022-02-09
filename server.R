@@ -9,9 +9,9 @@ source("./scripts/read_config.R")
 
 server <- function(input, output) {
   
-  rv <- reactiveValues(selected_type = "competences")
+  rv <- reactiveValues(selected_type = "Competences")
   observeEvent(input[["timeline_click"]],{
-    rv[["selected_type"]] <-tolower(input[["timeline_click"]][["panelvar1"]])
+    rv[["selected_type"]] <-input[["timeline_click"]][["panelvar1"]]
   })
   
   timeline_rv <- reactive({
@@ -25,8 +25,8 @@ server <- function(input, output) {
   
   output[["plot_timeline"]] <- renderPlot({
     mutate(timeline_rv(), type = factor(type, 
-                                   levels = levels(type), 
-                                   labels = toTitleCase(levels(type)))
+                                        levels = levels(type), 
+                                        labels = toTitleCase(levels(type)))
     ) %>%
       ggplot(aes(x = time, y = name, group = name)) +
       geom_line(position=position_dodge2(width = 1.5), size = 2) +
@@ -56,8 +56,16 @@ server <- function(input, output) {
   
   output[["text_panel"]] <- renderUI({
     panel_name <- rv[["selected_type"]]
-    includeMarkdown(
-      config[["panels"]][[panel_name]]
+    do.call(
+      tabsetPanel, 
+      c(
+        list(tabPanel("Competences", includeMarkdown(config[["panels"]][["competences"]]))),
+        list(tabPanel("Industry", includeMarkdown(config[["panels"]][["industry"]]))),
+        list(tabPanel("Education", includeMarkdown(config[["panels"]][["education"]]))),
+        list(tabPanel("Academia", includeMarkdown(config[["panels"]][["academia"]]))),
+        list(tabPanel("Community", includeMarkdown(config[["panels"]][["community"]]))),
+        list("selected" = panel_name)
+      )
     )
   })
 }
