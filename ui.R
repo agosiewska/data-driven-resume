@@ -47,7 +47,7 @@ tagList(
         box(
           checkboxGroupInput(
             "plot_checkbox", 
-            label="Click on the timeline to see more details about each area.",
+            label="Click on the plot to change the content of right panel.",
             choices=c(
               "Competences" = "competences",
               "Industry" = "industry",
