@@ -49,7 +49,7 @@ server <- function(input, output) {
     )
     plotOutput(
       "plot_timeline", 
-      height = 150 * length(input[["plot_checkbox"]]),
+      height = 170 * length(input[["plot_checkbox"]]),
       click = "timeline_click"
     )
   })
