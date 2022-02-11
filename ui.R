@@ -16,7 +16,10 @@ tagList(
   customTheme,
   dashboardPage( title=config[["name"]],
     
-    dashboardHeader(title="Resume"),
+    dashboardHeader(title="Resume",
+                    tags$li(class = "dropdown", 
+                            ui_element[["fork_me"]])
+                    ),
     dashboardSidebar(
       br(),
       conditionalPanel(

@@ -33,3 +33,4 @@ panels:
   competences: "./data/competences.md"
   education: "./data/education.md"
 timeline: "./data/timeline.csv"
+fork_info: true

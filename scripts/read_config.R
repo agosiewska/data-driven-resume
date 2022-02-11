@@ -80,6 +80,10 @@ cran_packages <- create_stat_div(
   statistics = statistics
 )
 
+fork_info <- tags$a()
+if (!is.null(config[["fork_info"]]) && config[["fork_info"]]) {
+  fork_info <- tags$a(href="https://github.com/agosiewska/data-driven-resume", HTML("<i class='fab fa-github'></i> Fork on GitHub"))
+} 
 
 ui_element <- list(
   "photo" = div(
@@ -101,5 +105,6 @@ ui_element <- list(
   "data_aquired" = div(
     p(paste("Data aquired:", statistics[["date"]])),
     class="data-aquired"
-  )
+  ),
+  "fork_me" = fork_info
 )
