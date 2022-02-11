@@ -14,7 +14,7 @@ tagList(
     includeCSS("styles.css")
   ),
   customTheme,
-  dashboardPage(
+  dashboardPage( title=config[["name"]],
     
     dashboardHeader(title="Resume"),
     dashboardSidebar(

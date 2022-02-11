@@ -1,10 +1,10 @@
 ### Competences (selected)
 
-### Data Science
+#### Data Science
 
 I have been practicing statistics and modeling for 6 years. In the projects, I have applied feature selection and feature engineering. I can train both interpretable models (logistic regression, trees) and complex models (xgboost, lgbm, neural networks). Moreover, I am proficient in eXplainable Artificial Intelligence (XAI) methods.
 
-### Machine Learning
+#### Machine Learning
 
 I have considerable experience in designing benchmarks, designing ML experiments, and implementing production models.
 
